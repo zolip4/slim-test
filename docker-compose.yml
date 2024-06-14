@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  endpoint-app:
+    build:
+      dockerfile: ./Dockerfile
+    environment:
+      docker: "true"
+    ports:
+      - "80:8080"
+    volumes:
+      - .:/var/www
